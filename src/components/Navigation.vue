@@ -6,7 +6,7 @@ const showMenu = ref(false)
 
 <template >
   <div class="relative sticky top-4 z-20">
-    <button @click="showMenu = !showMenu" class="bg-gray-200/80 hover:bg-white active:bg-white flex items-center space-x-4 border border-gray-200 mx-auto w-fit px-4 py-2 rounded-xl hover:bg-gray-300 focus:outline-none">
+    <button @click="showMenu = !showMenu" class="bg-gray-200/20 backdrop-blur-md hover:bg-white active:bg-white flex items-center space-x-4 border border-gray-200 mx-auto w-fit px-4 py-2 rounded-xl hover:bg-gray-300 focus:outline-none">
       <img src="/dumbbell.svg" class="w-7" alt="Logo" />
       <h1 class="font-bold text-xl">Iacob</h1>
       <div class="w-6 h-6 flex flex-col justify-center items-center">

@@ -41,7 +41,7 @@
     <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
       <h2 class="text-2xl font-semibold mb-6 text-gray-800 text-center">Book Your Appointment</h2>
       <div class="calendly-inline-widget" 
-           data-url="https://calendly.com/croitoriu-alexandru" 
+           data-url="https://calendly.com/iacob-alexandru1996" 
            style="min-width:320px;height:700px;">
       </div>
     </div>
@@ -77,6 +77,6 @@ onMounted(() => {
   }
 })
 </script>
-
+<!-- https://calendly.com/iacob-alexandru1996 -->
 <style scoped>
 </style>
