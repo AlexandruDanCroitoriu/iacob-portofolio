@@ -68,11 +68,25 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  // Load Calendly widget script if not already loaded
-  if (!window.Calendly) {
+  // Function to initialize Calendly widget
+  const initCalendly = () => {
+    if (window.Calendly) {
+      window.Calendly.initInlineWidget({
+        url: 'https://calendly.com/iacob-alexandru1996',
+        parentElement: document.querySelector('.calendly-inline-widget')
+      })
+    }
+  }
+
+  // Check if Calendly is already loaded
+  if (window.Calendly) {
+    initCalendly()
+  } else {
+    // Load Calendly script if not already loaded
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
+    script.onload = initCalendly
     document.head.appendChild(script)
   }
 })
