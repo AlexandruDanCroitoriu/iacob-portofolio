@@ -1,7 +1,7 @@
 <template>
     <button
         @click.stop="isDark = !isDark"
-        class="ml-4 p-2 rounded-full shadow-md transition-colors duration-300 bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        class="z-1 ml-4 p-2 rounded-full shadow-md transition-colors duration-300 bg-white dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400"
         :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
     >
         <span v-if="!isDark" class="flex items-center justify-center text-xl text-yellow-500 transition-transform duration-300 transform hover:scale-110">
@@ -20,7 +20,7 @@
 <script setup>
 import { ref, onMounted, watch } from 'vue'
 
-const isDark = ref(false)
+const isDark = ref(true)
 
 function applyDarkMode(value) {
   const element = document.getElementById('html-root')
