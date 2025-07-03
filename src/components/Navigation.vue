@@ -20,15 +20,10 @@ const showMenu = ref(false)
     </button>
    
     <div v-if="showMenu" class="absolute top-full mt-2 sm:left-1/2 transform sm:-translate-x-1/2 left-0 right-0 w-full sm:w-fit bg-white text-gray-600 flex items-center border border-gray-200 w-fit px-4 py-2 rounded-xl shadow-lg z-10">
-      <ul>
-        <li class="py-1 px-2 hover:bg-gray-100 rounded">
+      <nav>
           <router-link to="/" @click="showMenu = false" class="block text-gray-700 hover:text-blue-600">Home</router-link>
-        </li>
-        <li class="py-1 px-2 hover:bg-gray-100 rounded">
           <router-link to="/schedule" @click="showMenu = false" class="block text-gray-700 hover:text-blue-600">Schedule</router-link>
-        </li>
-
-      </ul>
+      </nav>
     </div>
   </div>
 </template>

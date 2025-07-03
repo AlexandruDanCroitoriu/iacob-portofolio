@@ -65,28 +65,38 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, nextTick } from 'vue'
 
-onMounted(() => {
+onMounted(async () => {
+  // Wait for the component to be fully mounted and DOM to be ready
+  await nextTick()
+  
   // Function to initialize Calendly widget
   const initCalendly = () => {
-    if (window.Calendly) {
+    const widgetElement = document.querySelector('.calendly-inline-widget')
+    if (window.Calendly && widgetElement) {
+      // Clear any existing content
+      widgetElement.innerHTML = ''
+      
       window.Calendly.initInlineWidget({
         url: 'https://calendly.com/iacob-alexandru1996',
-        parentElement: document.querySelector('.calendly-inline-widget')
+        parentElement: widgetElement
       })
     }
   }
 
   // Check if Calendly is already loaded
   if (window.Calendly) {
-    initCalendly()
+    // Add a small delay to ensure DOM is ready after page transition
+    setTimeout(initCalendly, 100)
   } else {
     // Load Calendly script if not already loaded
     const script = document.createElement('script')
     script.src = 'https://assets.calendly.com/assets/external/widget.js'
     script.async = true
-    script.onload = initCalendly
+    script.onload = () => {
+      setTimeout(initCalendly, 100)
+    }
     document.head.appendChild(script)
   }
 })
