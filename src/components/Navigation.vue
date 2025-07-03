@@ -6,7 +6,7 @@ const showMenu = ref(false)
 
 <template >
   <div class="relative sticky top-4 z-20">
-    <button @click="showMenu = !showMenu" class="bg-gray-200/20 backdrop-blur-md hover:bg-white active:bg-white flex items-center space-x-4 border border-gray-200 mx-auto w-fit px-4 py-2 rounded-xl hover:bg-gray-300 focus:outline-none">
+    <button @click="showMenu = !showMenu" class="bg-gray-200/20 backdrop-blur-lg hover:bg-gray-200/30 text-gray-600 hover:text-black flex items-center space-x-4 border border-gray-200 mx-auto w-fit px-4 py-2 rounded-xl   focus:outline-none">
       <img src="/dumbbell.svg" class="w-7" alt="Logo" />
       <h1 class="font-bold text-xl">Iacob</h1>
       <div class="w-6 h-6 flex flex-col justify-center items-center">
@@ -19,7 +19,7 @@ const showMenu = ref(false)
       </div>
     </button>
    
-    <div v-if="showMenu" class="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 bg-white flex items-center border border-gray-200 w-fit px-4 py-2 rounded-xl hover:bg-gray-300 shadow-lg z-10">
+    <div v-if="showMenu" class="absolute top-full mt-2 sm:left-1/2 transform sm:-translate-x-1/2 left-0 right-0 w-full sm:w-fit bg-white text-gray-600 flex items-center border border-gray-200 w-fit px-4 py-2 rounded-xl shadow-lg z-10">
       <ul>
         <li class="py-1 px-2 hover:bg-gray-100 rounded">
           <router-link to="/" @click="showMenu = false" class="block text-gray-700 hover:text-blue-600">Home</router-link>
