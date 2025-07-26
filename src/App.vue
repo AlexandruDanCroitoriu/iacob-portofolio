@@ -21,7 +21,7 @@ onMounted(() => {
     <!-- Fitness Coach Portfolio Website -->
     <HeaderSection class="relative pb-42"/>
     <div class="relative">
-      <CardsSection class="absolute -top-22 container"/>
+      <CardsSection class="absolute -top-22 left-1/2 -translate-x-1/2 container flex items-center justify-center"/>
     </div>
     <ServicesSection class="pt-62"/>
     <WhyMeSection />

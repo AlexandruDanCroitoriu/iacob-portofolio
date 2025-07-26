@@ -1,5 +1,5 @@
 <template>
-  <section class="z-10 hidden md:block">
+  <section class="z-10 hidden md:block container">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <!-- Service Cards -->
