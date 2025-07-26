@@ -1,9 +1,42 @@
-# Vue 3 + Vite
+# Fitness Coach Portfolio Website
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A dark, sexy, modern, and minimalistic portfolio website for a professional fitness coach. Built with Vue 3 and Vite for optimal performance and a sleek user experience.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Overview
 
+This single-page application showcases a fitness coach's services, expertise, and personality through a carefully crafted dark aesthetic that embodies strength, elegance, and professionalism.
 
-  npm install
-  npm run dev
+## Design Philosophy
+
+- **Dark Theme**: Sophisticated black and deep gray color palette with strategic accent colors
+- **Sexy & Modern**: Sleek typography, smooth animations, and contemporary layouts
+- **Minimalistic**: Clean design with purposeful whitespace and focused content
+- **Fitness-Focused**: Content and imagery that resonates with fitness enthusiasts
+
+## Technology Stack
+
+- **Framework**: Vue 3 with Composition API
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS with custom dark theme
+- **Architecture**: Single Page Application (SPA)
+
+## Quick Start
+
+```bash
+npm install
+npm run dev
+```
+
+## Website Sections
+
+1. **Hero Section** - Bold introduction with coach's name and specialization
+2. **Service Cards** - Quick overview of training services (desktop/tablet only)
+3. **Services Section** - Detailed fitness programs and coaching options
+4. **Why Choose Me** - Unique value proposition and credentials
+5. **About Me** - Personal story and fitness philosophy
+6. **Contact** - Easy ways to get in touch and start training
+7. **Footer** - Social links and additional information
+
+## Target Audience
+
+Fitness enthusiasts, athletes, and individuals seeking professional fitness coaching and personal training services.
