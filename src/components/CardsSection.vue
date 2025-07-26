@@ -1,5 +1,5 @@
 <template>
-  <section class="relative z-10 hidden md:block -mt-16">
+  <section class="z-10 hidden md:block">
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <!-- Service Cards -->
@@ -26,7 +26,7 @@
               class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300"
               @click="scrollToService(service.id)"
             >
-              Vezi detalii
+              {{ iacobData.ui.buttons.seeDetails }}
             </button>
           </div>
         </div>
@@ -71,10 +71,12 @@ const scrollToService = (serviceId) => {
 </script>
 
 <style scoped>
-/* Additional custom styles can be added here if needed */
-.container {
-  /* Ensuring proper positioning relative to parent sections */
-  position: relative;
+/* Line clamp utility for description truncation */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* Responsive visibility - hidden on mobile, visible on tablet and up */

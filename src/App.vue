@@ -19,9 +19,11 @@ onMounted(() => {
 <template>
   <div>
     <!-- Fitness Coach Portfolio Website -->
-    <HeaderSection />
-    <CardsSection />
-    <ServicesSection />
+    <HeaderSection class="relative pb-42"/>
+    <div class="relative">
+      <CardsSection class="absolute -top-22 container"/>
+    </div>
+    <ServicesSection class="pt-62"/>
     <WhyMeSection />
     <WhoIAmSection />
     <ContactSection />

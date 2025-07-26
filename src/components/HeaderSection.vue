@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-20 pb-32 bg-black shadow-lg shadow-gray-900/30">
+  <section class="pt-20 pb-16 bg-black shadow-lg shadow-gray-900/30">
     <div class="container mx-auto px-4">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         
@@ -19,7 +19,7 @@
           </blockquote>
           
           <!-- Call to Action Button -->
-          <ScheduleButton text="BOOK NOW" />
+          <ScheduleButton :text="iacobData.ui.buttons.bookNow" />
         </div>
 
         <!-- Right Column - Profile Photo -->
@@ -34,7 +34,7 @@
             <div class="absolute bottom-4 right-4 bg-red-500 text-white px-4 py-2 rounded-lg">
               <div class="text-center">
                 <div class="text-lg font-bold">{{ iacobData.personal.yearsExperience }}+</div>
-                <div class="text-xs uppercase">Years</div>
+                <div class="text-xs uppercase">{{ iacobData.ui.sections.header.yearsLabel }}</div>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
   <div>
     <button
       @click="openSchedulePopup" 
-      class="bg-red-600 rounded-md block text-white px-8 py-3 font-semibold hover:bg-red-700 transition-colors">
+      class="bg-red-600 rounded-md inline-block text-white px-8 py-3 font-semibold hover:bg-red-700 transition-colors">
       {{ text }}
     </button>
   </div>
@@ -34,13 +34,20 @@ onMounted(() => {
 })
 
 // Function to open the schedule popup
-const openSchedulePopup = () => {
+const openSchedulePopup = (event) => {
+  // Prevent any default button behavior that might cause scrolling
+  event.preventDefault()
+  
+  // Save current scroll position
+  const scrollX = window.scrollX || window.pageXOffset
+  const scrollY = window.scrollY || window.pageYOffset
+  
   if (window.daySchedule) {
     window.daySchedule.initPopupWidget({
       url: props.serviceUrl,
       color: {
-        primary: '#dc2626', // red-600 to match button
-        secondary: '#fca5a5' // red-300 for secondary color
+        primary: '#1f2937', // dark gray for dark theme
+        secondary: '#374151' // lighter dark gray for secondary elements
       },
       hideHeader: false, // Keep DaySchedule branding
       width: '100%',
@@ -57,9 +64,16 @@ const openSchedulePopup = () => {
         right: '0 !important',
         bottom: '0 !important',
         margin: '0 !important',
-        padding: '0 !important'
+        padding: '0 !important',
+        backgroundColor: '#111827 !important', // dark background
+        color: '#f9fafb !important' // light text
       }
     })
+    
+    // Restore scroll position after a brief delay to ensure popup is rendered
+    setTimeout(() => {
+      window.scrollTo(scrollX, scrollY)
+    }, 10)
   } else {
     // Fallback if script hasn't loaded yet
     console.warn('DaySchedule widget not loaded yet')
@@ -71,8 +85,8 @@ const openSchedulePopup = () => {
       window.daySchedule.initPopupWidget({
         url: props.serviceUrl,
         color: {
-          primary: '#dc2626',
-          secondary: '#fca5a5'
+          primary: '#1f2937', // dark gray for dark theme
+          secondary: '#374151' // lighter dark gray for secondary elements
         },
         width: '100%',
         height: '100%',
@@ -88,9 +102,16 @@ const openSchedulePopup = () => {
           right: '0 !important',
           bottom: '0 !important',
           margin: '0 !important',
-          padding: '0 !important'
+          padding: '0 !important',
+          backgroundColor: '#111827 !important', // dark background
+          color: '#f9fafb !important' // light text
         }
       })
+      
+      // Restore scroll position after a brief delay to ensure popup is rendered
+      setTimeout(() => {
+        window.scrollTo(scrollX, scrollY)
+      }, 10)
     }
     document.head.appendChild(script)
   }

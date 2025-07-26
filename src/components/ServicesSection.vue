@@ -1,13 +1,13 @@
 <template>
-  <section id="services" class="py-16 bg-gray-50">
+  <section id="services" class="pt-20 pb-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-          My <span class="text-red-500">Services</span>
+          {{ iacobData.ui.sections.services.title.split(' ')[0] }} <span class="text-red-500">{{ iacobData.ui.sections.services.title.split(' ')[1] }}</span>
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Transform your fitness journey with personalized training, nutrition guidance, and expert coaching tailored to your unique goals.
+          {{ iacobData.ui.sections.services.subtitle }}
         </p>
       </div>
 

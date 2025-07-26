@@ -130,6 +130,45 @@ export const iacobData = {
     ]
   },
 
+  // UI Text and Labels
+  ui: {
+    buttons: {
+      bookNow: "BOOK NOW",
+      getStarted: "GET STARTED TODAY",
+      scheduleConsultation: "SCHEDULE A CONSULTATION",
+      bookSession: "BOOK YOUR SESSION",
+      seeDetails: "Vezi detalii" // Romanian for "See details"
+    },
+    sections: {
+      services: {
+        title: "My Services",
+        subtitle: "Transform your fitness journey with personalized training, nutrition guidance, and expert coaching tailored to your unique goals.",
+        bookPrefix: "Book" // For "Book Personal Training" etc.
+      },
+      contact: {
+        phoneLabel: "Telefon", // Romanian for "Phone"
+        emailLabel: "Email",
+        addressLabel: "Address",
+        workingHoursTitle: "Working Hours",
+        getInTouchTitle: "Get In Touch"
+      },
+      whyMe: {
+        callToActionText: "Ready to start your transformation journey?"
+      },
+      whoIAm: {
+        callToActionText: "Let's work together to achieve your fitness goals",
+        storyTitle: "My Story",
+        achievementsTitle: "Achievements & Credentials",
+        philosophyTitle: "My Philosophy",
+        clientsHelped: "Clients Helped",
+        yearsExperienceLabel: "Years Experience"
+      },
+      header: {
+        yearsLabel: "Years"
+      }
+    }
+  },
+
 
 
 };

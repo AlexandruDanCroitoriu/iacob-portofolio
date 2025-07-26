@@ -18,7 +18,7 @@
           <div>
             <!-- Story -->
             <div class="mb-8">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">My Story</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ iacobData.ui.sections.whoIAm.storyTitle }}</h3>
               <p class="text-gray-600 leading-relaxed mb-6">
                 {{ iacobData.whoIAm.story }}
               </p>
@@ -26,7 +26,7 @@
 
             <!-- Achievements -->
             <div class="mb-8">
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">Achievements & Credentials</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ iacobData.ui.sections.whoIAm.achievementsTitle }}</h3>
               <ul class="space-y-3">
                 <li 
                   v-for="achievement in iacobData.whoIAm.achievements" 
@@ -41,7 +41,7 @@
 
             <!-- Philosophy -->
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-4">My Philosophy</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ iacobData.ui.sections.whoIAm.philosophyTitle }}</h3>
               <p class="text-gray-600 leading-relaxed italic">
                 "{{ iacobData.whoIAm.philosophy }}"
               </p>
@@ -64,11 +64,11 @@
                     <div class="grid grid-cols-2 gap-4 text-center">
                       <div>
                         <div class="text-2xl font-bold text-gray-900">{{ iacobData.personal.yearsExperience }}+</div>
-                        <div class="text-sm text-gray-600">Years Experience</div>
+                        <div class="text-sm text-gray-600">{{ iacobData.ui.sections.whoIAm.yearsExperienceLabel }}</div>
                       </div>
                       <div>
                         <div class="text-2xl font-bold text-gray-900">500+</div>
-                        <div class="text-sm text-gray-600">Clients Helped</div>
+                        <div class="text-sm text-gray-600">{{ iacobData.ui.sections.whoIAm.clientsHelped }}</div>
                       </div>
                     </div>
                   </div>
@@ -81,9 +81,9 @@
         <!-- Call to Action -->
         <div class="text-center mt-16">
           <p class="text-lg text-gray-600 mb-6">
-            Let's work together to achieve your fitness goals
+            {{ iacobData.ui.sections.whoIAm.callToActionText }}
           </p>
-          <ScheduleButton text="SCHEDULE A CONSULTATION" />
+          <ScheduleButton :text="iacobData.ui.buttons.scheduleConsultation" />
         </div>
       </div>
     </div>

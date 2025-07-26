@@ -38,9 +38,9 @@
       <!-- Call to Action -->
       <div class="text-center mt-16">
         <p class="text-lg text-gray-600 mb-6">
-          Ready to start your transformation journey?
+          {{ iacobData.ui.sections.whyMe.callToActionText }}
         </p>
-        <ScheduleButton text="GET STARTED TODAY" class="flex justify-end"/>
+        <ScheduleButton :text="iacobData.ui.buttons.getStarted" class="flex justify-center"/>
       </div>
     </div>
   </section>

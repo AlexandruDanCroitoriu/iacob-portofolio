@@ -38,7 +38,7 @@
             
             <!-- Contact Details -->
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ iacobData.ui.sections.contact.getInTouchTitle }}</h3>
               
               <!-- Address -->
               <div class="flex items-start mb-6">
@@ -49,7 +49,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.addressLabel }}</h4>
                   <p class="text-gray-600">
                     {{ iacobData.contact.address.street }}<br>
                     {{ iacobData.contact.address.city }}, {{ iacobData.contact.address.state }} {{ iacobData.contact.address.zip }}<br>
@@ -66,7 +66,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.phoneLabel }}</h4>
                   <p class="text-gray-600">{{ iacobData.personal.phone }}</p>
                 </div>
               </div>
@@ -79,7 +79,7 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.emailLabel }}</h4>
                   <p class="text-gray-600">{{ iacobData.personal.email }}</p>
                 </div>
               </div>
@@ -87,7 +87,7 @@
 
             <!-- Working Hours -->
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Working Hours</h3>
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ iacobData.ui.sections.contact.workingHoursTitle }}</h3>
               <div class="space-y-3">
                 <div 
                   v-for="schedule in iacobData.contact.workingHours" 
@@ -102,7 +102,7 @@
 
             <!-- Call to Action -->
             <div class="pt-4">
-              <ScheduleButton text="BOOK YOUR SESSION" />
+              <ScheduleButton :text="iacobData.ui.buttons.bookSession" class="flex justify-center"/>
             </div>
           </div>
         </div>
