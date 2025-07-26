@@ -33,13 +33,13 @@ export const iacobData = {
       id: "nutrition-coaching",
       title: "Nutrition Coaching",
       description: "Custom meal plans and nutritional guidance to fuel your transformation. I provide detailed nutrition assessments, help you set realistic dietary goals, and teach you how to make healthy choices that fit your lifestyle. You'll learn about macronutrients, portion control, and how to optimize your meals for energy and recovery. My coaching includes ongoing support, recipe ideas, and strategies to overcome common obstacles. With my guidance, you'll develop sustainable habits that support your fitness journey and overall well-being.",
-      scheduleUrl: "https://alexsakii.dayschedule.com/nutritionist-coaching"
+      scheduleUrl: "https://alexsakii.dayschedule.com/"
     },
     {
       id: "online-coaching",
       title: "Online Coaching",
       description: "Virtual training sessions and guidance from anywhere in the world. Benefit from flexible scheduling, personalized workout programs, and regular check-ins to keep you accountable. I use video calls, messaging, and progress tracking tools to ensure you stay motivated and on track. You'll receive expert feedback on your form, technique, and performance, just like in-person clients. Online coaching is perfect for busy professionals, frequent travelers, or anyone who prefers to train at home. Experience the same level of support and results, no matter where you are.",
-      scheduleUrl: "https://alexsakii.dayschedule.com/online-coaching"
+      scheduleUrl: "https://alexsakii.dayschedule.com/"
     }
   ],
 
