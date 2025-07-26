@@ -1,8 +1,8 @@
 <template>
-  <section id="services" class="py-20 bg-gray-50">
+  <section id="services" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
-      <div class="text-center mb-16">
+      <div class="text-center mb-12">
         <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
           My <span class="text-red-500">Services</span>
         </h2>
@@ -12,7 +12,7 @@
       </div>
 
       <!-- Services Grid -->
-      <div class="space-y-8 max-w-4xl mx-auto">
+      <div class="space-y-6 max-w-4xl mx-auto">
         <div 
           v-for="service in iacobData.services" 
           :key="service.id"
@@ -20,19 +20,20 @@
           class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 w-full"
         >
           <!-- Service Title -->
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center whitespace-nowrap">
             {{ service.title }}
           </h3>
           
           <!-- Service Description -->
-          <p class="text-gray-600 text-center leading-relaxed mb-8 line-clamp-4">
+          <p class="text-gray-600 text-center leading-relaxed mb-8">
             {{ service.description }}
           </p>
           
           <!-- Action Button -->
           <div class="text-center">
-            <ScheduleButton class="ml-auto"
+            <ScheduleButton class="inline-block"
               :text="`Book ${service.title}`"
+              :service-url="service.scheduleUrl"
             />
           </div>
         </div>

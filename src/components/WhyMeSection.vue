@@ -40,7 +40,7 @@
         <p class="text-lg text-gray-600 mb-6">
           Ready to start your transformation journey?
         </p>
-        <ScheduleButton text="GET STARTED TODAY" />
+        <ScheduleButton text="GET STARTED TODAY" class="flex justify-end"/>
       </div>
     </div>
   </section>

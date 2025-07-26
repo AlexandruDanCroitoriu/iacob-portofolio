@@ -27,16 +27,19 @@ export const iacobData = {
       id: "personal-training",
       title: "Personal Training",
       description: "One-on-one sessions tailored to your goals, fitness level, and lifestyle. Receive personalized workout plans, ongoing progress tracking, and expert guidance every step of the way. Each session is designed to challenge you, motivate you, and help you break through plateaus. Whether you're a beginner or an experienced athlete, I will adapt the training to your unique needs and abilities. Together, we'll build strength, improve endurance, and boost your confidence both inside and outside the gym.",
+      scheduleUrl: "https://alexsakii.dayschedule.com/group-session"
     },
     {
       id: "nutrition-coaching",
       title: "Nutrition Coaching",
       description: "Custom meal plans and nutritional guidance to fuel your transformation. I provide detailed nutrition assessments, help you set realistic dietary goals, and teach you how to make healthy choices that fit your lifestyle. You'll learn about macronutrients, portion control, and how to optimize your meals for energy and recovery. My coaching includes ongoing support, recipe ideas, and strategies to overcome common obstacles. With my guidance, you'll develop sustainable habits that support your fitness journey and overall well-being.",
+      scheduleUrl: "https://alexsakii.dayschedule.com/nutritionist-coaching"
     },
     {
       id: "online-coaching",
       title: "Online Coaching",
       description: "Virtual training sessions and guidance from anywhere in the world. Benefit from flexible scheduling, personalized workout programs, and regular check-ins to keep you accountable. I use video calls, messaging, and progress tracking tools to ensure you stay motivated and on track. You'll receive expert feedback on your form, technique, and performance, just like in-person clients. Online coaching is perfect for busy professionals, frequent travelers, or anyone who prefers to train at home. Experience the same level of support and results, no matter where you are.",
+      scheduleUrl: "https://alexsakii.dayschedule.com/online-coaching"
     }
   ],
 
