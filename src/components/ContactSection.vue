@@ -1,12 +1,12 @@
 <template>
-  <section id="contact" class="py-20 bg-white">
+  <section id="contact" class="py-20 bg-gray-900">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           <span class="text-red-500">Contact</span>
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.contact.subtitle }}
         </p>
       </div>
@@ -16,7 +16,7 @@
           
           <!-- Left Column - Map -->
           <div>
-            <div class="bg-gray-100 rounded-2xl p-2 h-[400px] md:h-[500px]">
+            <div class="bg-gray-800 rounded-2xl p-2 h-[400px] md:h-[500px]">
               <div class="w-full h-full rounded-xl overflow-hidden">
                 <iframe
                   :src="iacobData.contact.mapEmbedUrl"
@@ -38,7 +38,7 @@
             
             <!-- Contact Details -->
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ iacobData.ui.sections.contact.getInTouchTitle }}</h3>
+              <h3 class="text-2xl font-bold text-white mb-6">{{ iacobData.ui.sections.contact.getInTouchTitle }}</h3>
               
               <!-- Address -->
               <div class="flex items-start mb-6">
@@ -49,8 +49,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.addressLabel }}</h4>
-                  <p class="text-gray-600">
+                  <h4 class="font-semibold text-white mb-1">{{ iacobData.ui.sections.contact.addressLabel }}</h4>
+                  <p class="text-gray-300">
                     {{ iacobData.contact.address.street }}<br>
                     {{ iacobData.contact.address.city }}, {{ iacobData.contact.address.state }} {{ iacobData.contact.address.zip }}<br>
                     {{ iacobData.contact.address.country }}
@@ -66,8 +66,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.phoneLabel }}</h4>
-                  <p class="text-gray-600">{{ iacobData.personal.phone }}</p>
+                  <h4 class="font-semibold text-white mb-1">{{ iacobData.ui.sections.contact.phoneLabel }}</h4>
+                  <p class="text-gray-300">{{ iacobData.personal.phone }}</p>
                 </div>
               </div>
 
@@ -79,23 +79,23 @@
                   </svg>
                 </div>
                 <div>
-                  <h4 class="font-semibold text-gray-900 mb-1">{{ iacobData.ui.sections.contact.emailLabel }}</h4>
-                  <p class="text-gray-600">{{ iacobData.personal.email }}</p>
+                  <h4 class="font-semibold text-white mb-1">{{ iacobData.ui.sections.contact.emailLabel }}</h4>
+                  <p class="text-gray-300">{{ iacobData.personal.email }}</p>
                 </div>
               </div>
             </div>
 
             <!-- Working Hours -->
             <div>
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">{{ iacobData.ui.sections.contact.workingHoursTitle }}</h3>
+              <h3 class="text-2xl font-bold text-white mb-6">{{ iacobData.ui.sections.contact.workingHoursTitle }}</h3>
               <div class="space-y-3">
                 <div 
                   v-for="schedule in iacobData.contact.workingHours" 
                   :key="schedule.day"
-                  class="flex justify-between items-center py-2 border-b border-gray-200"
+                  class="flex justify-between items-center py-2 border-b border-gray-700"
                 >
-                  <span class="font-medium text-gray-900">{{ schedule.day }}</span>
-                  <span class="text-gray-600">{{ schedule.hours }}</span>
+                  <span class="font-medium text-white">{{ schedule.day }}</span>
+                  <span class="text-gray-300">{{ schedule.hours }}</span>
                 </div>
               </div>
             </div>

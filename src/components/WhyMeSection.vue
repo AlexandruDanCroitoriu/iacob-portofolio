@@ -1,43 +1,69 @@
 <template>
-  <section id="why-me" class="py-20 bg-white">
+  <section id="why-me" class="py-20 bg-gray-900">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           Why <span class="text-red-500">Me</span>
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.whyMe.subtitle }}
         </p>
       </div>
 
-      <!-- Reasons Grid -->
-      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        <div 
-          v-for="(reason, index) in iacobData.whyMe.reasons" 
-          :key="reason.id"
-          class="bg-gray-50 rounded-2xl p-8 hover:bg-gray-100 transition-all duration-300 border border-gray-200"
-        >
-          <!-- Number Badge -->
-          <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mb-6">
-            <span class="text-white text-xl font-bold">{{ index + 1 }}</span>
+      <div class="max-w-6xl mx-auto">
+        <div class="grid lg:grid-cols-3 gap-12 items-start">
+          
+          <!-- Left Column - Image -->
+          <div class="lg:col-span-1">
+            <div class="relative">
+              <div class="aspect-[3/4] rounded-2xl overflow-hidden">
+                <img 
+                  src="../assets/images/image00029.jpeg" 
+                  alt="Alexandru Iacob Training"
+                  class="w-full h-full object-cover"
+                />
+                <!-- Gradient overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+              </div>
+            </div>
           </div>
 
-          <!-- Reason Title -->
-          <h3 class="text-2xl font-bold text-gray-900 mb-4">
-            {{ reason.title }}
-          </h3>
-          
-          <!-- Reason Description -->
-          <p class="text-gray-600 leading-relaxed">
-            {{ reason.description }}
-          </p>
+          <!-- Right Column - Reasons Grid -->
+          <div class="lg:col-span-2">
+            <div class="grid md:grid-cols-1 gap-6">
+              <div 
+                v-for="(reason, index) in iacobData.whyMe.reasons" 
+                :key="reason.id"
+                class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all duration-300 border border-gray-700"
+              >
+                <div class="flex items-start space-x-4">
+                  <!-- Number Badge -->
+                  <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-white text-lg font-bold">{{ index + 1 }}</span>
+                  </div>
+
+                  <div class="flex-1">
+                    <!-- Reason Title -->
+                    <h3 class="text-xl font-bold text-white mb-2">
+                      {{ reason.title }}
+                    </h3>
+                    
+                    <!-- Reason Description -->
+                    <p class="text-gray-300 leading-relaxed text-sm">
+                      {{ reason.description }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Call to Action -->
       <div class="text-center mt-16">
-        <p class="text-lg text-gray-600 mb-6">
+        <p class="text-lg text-gray-300 mb-6">
           {{ iacobData.ui.sections.whyMe.callToActionText }}
         </p>
         <ScheduleButton :text="iacobData.ui.buttons.getStarted" class="flex justify-center"/>
@@ -53,8 +79,13 @@ import ScheduleButton from './ScheduleButton.vue'
 
 <style scoped>
 /* Hover effects */
-.hover\:bg-gray-100:hover {
-  background-color: #f3f4f6;
+.hover\:bg-gray-750:hover {
+  background-color: #374151;
+}
+
+/* Image aspect ratio */
+.aspect-\[3\/4\] {
+  aspect-ratio: 3 / 4;
 }
 
 /* Responsive adjustments */
@@ -66,6 +97,16 @@ import ScheduleButton from './ScheduleButton.vue'
   
   .grid {
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .lg\:col-span-1, .lg\:col-span-2 {
+    grid-column: span 1 / span 1;
   }
 }
 </style>

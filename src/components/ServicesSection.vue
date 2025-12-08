@@ -1,12 +1,12 @@
 <template>
-  <section id="services" class="pt-20 pb-16 bg-gray-50">
+  <section id="services" class="pt-20 pb-16 bg-gray-900">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           {{ iacobData.ui.sections.services.title.split(' ')[0] }} <span class="text-red-500">{{ iacobData.ui.sections.services.title.split(' ')[1] }}</span>
         </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.ui.sections.services.subtitle }}
         </p>
       </div>
@@ -17,15 +17,15 @@
           v-for="service in iacobData.services" 
           :key="service.id"
           :id="`service-${service.id}`"
-          class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 w-full"
+          class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 w-full hover:bg-gray-750"
         >
           <!-- Service Title -->
-          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center whitespace-nowrap">
+          <h3 class="text-2xl font-bold text-white mb-4 text-center whitespace-nowrap">
             {{ service.title }}
           </h3>
           
           <!-- Service Description -->
-          <p class="text-gray-600 text-center leading-relaxed mb-8">
+          <p class="text-gray-300 text-center leading-relaxed mb-8">
             {{ service.description }}
           </p>
           
