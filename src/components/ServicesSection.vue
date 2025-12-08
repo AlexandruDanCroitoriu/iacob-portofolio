@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="pt-20 pb-16 bg-gray-900">
+  <section id="services" class="pt-20 pb-16 bg-black">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12">
@@ -17,7 +17,7 @@
           v-for="service in iacobData.services" 
           :key="service.id"
           :id="`service-${service.id}`"
-          class="bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-700 w-full hover:bg-gray-750"
+          class="bg-zinc-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-zinc-700 w-full hover:bg-zinc-750"
         >
           <!-- Service Title -->
           <h3 class="text-2xl font-bold text-white mb-4 text-center whitespace-nowrap">
@@ -71,6 +71,10 @@ const getServiceNumber = (serviceId) => {
 /* Hover effects */
 .hover\:shadow-xl:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hover\:bg-zinc-750:hover {
+  background-color: #27272a;
 }
 
 /* Pulse animation for when service is scrolled to */

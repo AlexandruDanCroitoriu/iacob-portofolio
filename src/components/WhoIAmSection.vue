@@ -1,5 +1,5 @@
 <template>
-  <section id="who-i-am" class="py-20 bg-gray-900">
+  <section id="who-i-am" class="py-20 bg-gray-950">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -60,7 +60,7 @@
                 <!-- Overlay with credentials -->
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
-                  <div class="bg-gray-800/90 backdrop-blur-sm rounded-lg p-4 border border-gray-700">
+                  <div class="bg-zinc-800/90 backdrop-blur-sm rounded-lg p-4 border border-zinc-700">
                     <div class="grid grid-cols-2 gap-4 text-center">
                       <div>
                         <div class="text-2xl font-bold text-white">{{ iacobData.personal.yearsExperience }}+</div>

@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-gray-900 text-white py-16">
+  <footer class="bg-black text-white py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto">
         <div class="grid md:grid-cols-4 gap-8">
@@ -18,7 +18,7 @@
             <div class="flex space-x-4">
               <a 
                 :href="iacobData.socialMedia.instagram" 
-                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

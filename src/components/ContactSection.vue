@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="py-20 bg-gray-900">
+  <section id="contact" class="py-20 bg-zinc-950">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -16,7 +16,7 @@
           
           <!-- Left Column - Map -->
           <div>
-            <div class="bg-gray-800 rounded-2xl p-2 h-[400px] md:h-[500px]">
+            <div class="bg-zinc-800 rounded-2xl p-2 h-[400px] md:h-[500px]">
               <div class="w-full h-full rounded-xl overflow-hidden">
                 <iframe
                   :src="iacobData.contact.mapEmbedUrl"

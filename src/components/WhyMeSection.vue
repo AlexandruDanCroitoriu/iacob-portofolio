@@ -1,5 +1,5 @@
 <template>
-  <section id="why-me" class="py-20 bg-gray-900">
+  <section id="why-me" class="py-20 bg-zinc-900">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-16">
@@ -35,7 +35,7 @@
               <div 
                 v-for="(reason, index) in iacobData.whyMe.reasons" 
                 :key="reason.id"
-                class="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all duration-300 border border-gray-700"
+                class="bg-zinc-800 rounded-2xl p-6 hover:bg-zinc-750 transition-all duration-300 border border-zinc-700"
               >
                 <div class="flex items-start space-x-4">
                   <!-- Number Badge -->
@@ -79,8 +79,8 @@ import ScheduleButton from './ScheduleButton.vue'
 
 <style scoped>
 /* Hover effects */
-.hover\:bg-gray-750:hover {
-  background-color: #374151;
+.hover\:bg-zinc-750:hover {
+  background-color: #27272a;
 }
 
 /* Image aspect ratio */
