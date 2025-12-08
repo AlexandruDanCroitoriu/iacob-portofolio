@@ -6,7 +6,7 @@
         <div 
           v-for="service in iacobData.services" 
           :key="service.id"
-          class="bg-gray-800 bg-opacity-90 rounded-2xl p-8 transition-all duration-300 backdrop-blur-sm hover:bg-gray-700"
+          class="bg-zinc-900 bg-opacity-95 rounded-2xl p-8 transition-all duration-300 backdrop-blur-sm hover:bg-zinc-800"
           :style="getCardShadow(service.id)"
         >
           <!-- Card Content -->

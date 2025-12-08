@@ -27,7 +27,7 @@
               </a>
               <a 
                 :href="iacobData.socialMedia.youtube" 
-                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
                 aria-label="YouTube"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -36,7 +36,7 @@
               </a>
               <a 
                 :href="iacobData.socialMedia.facebook" 
-                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@
               </a>
               <a 
                 :href="iacobData.socialMedia.linkedin" 
-                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
