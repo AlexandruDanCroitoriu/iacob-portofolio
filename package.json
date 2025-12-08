@@ -17,6 +17,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
+    "sharp": "^0.34.5",
     "vite": "^7.0.0"
-  }
+  },
+  "description": "A dark, sexy, modern, and minimalistic portfolio website for a professional fitness coach. Built with Vue 3 and Vite for optimal performance and a sleek user experience.",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

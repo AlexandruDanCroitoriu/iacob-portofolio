@@ -25,7 +25,19 @@
               :alt="image.alt"
               class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               loading="lazy"
+              decoding="async"
+              @load="onImageLoad(index)"
+              @error="onImageError(index)"
             />
+            <!-- Loading placeholder -->
+            <div 
+              v-if="!image.loaded" 
+              class="absolute inset-0 bg-gray-800 animate-pulse flex items-center justify-center"
+            >
+              <svg class="w-8 h-8 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+              </svg>
+            </div>
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300">
               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -219,7 +231,9 @@ onMounted(() => {
   imageEntries.forEach(([path, module], index) => {
     galleryImages.value.push({
       src: module.default,
-      alt: `Alexandru Iacob Training Photo ${index + 1}`
+      alt: `Alexandru Iacob Training Photo ${index + 1}`,
+      loaded: false,
+      error: false
     })
   })
 })
@@ -256,6 +270,19 @@ const openModalFromDialog = (index) => {
 const closeModal = () => {
   isModalOpen.value = false
   document.body.style.overflow = 'auto'
+}
+
+// Image loading handlers
+const onImageLoad = (index) => {
+  if (galleryImages.value[index]) {
+    galleryImages.value[index].loaded = true
+  }
+}
+
+const onImageError = (index) => {
+  if (galleryImages.value[index]) {
+    galleryImages.value[index].error = true
+  }
 }
 
 const nextImage = () => {
@@ -348,6 +375,20 @@ onUnmounted(() => {
 /* Custom aspect ratio */
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 /* Modal backdrop blur effect */
