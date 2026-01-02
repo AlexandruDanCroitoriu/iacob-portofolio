@@ -102,7 +102,7 @@
 
             <!-- Call to Action -->
             <div class="pt-4">
-              <ScheduleButton :text="iacobData.ui.buttons.bookSession" class="flex justify-center"/>
+              <ScheduleButton :text="iacobData.ui.buttons.bookNow" class="flex justify-center"/>
             </div>
           </div>
         </div>

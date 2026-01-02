@@ -66,7 +66,7 @@
         <p class="text-lg text-gray-300 mb-6">
           {{ iacobData.ui.sections.whyMe.callToActionText }}
         </p>
-        <ScheduleButton :text="iacobData.ui.buttons.getStarted" class="flex justify-center"/>
+        <ScheduleButton :text="iacobData.ui.buttons.bookNow" class="flex justify-center"/>
       </div>
     </div>
   </section>

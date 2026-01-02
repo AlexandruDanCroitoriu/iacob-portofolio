@@ -1,7 +1,7 @@
 <template>
   <section class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden hero-background">
     <!-- Gradient overlay for text readability -->
-    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/30 via-black/40 to-black/50"></div>
+    <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/10 via-black/20 to-black/30"></div>
 
     <!-- Centered Content -->
     <div class="relative z-10 container mx-auto px-4 text-center">
@@ -9,22 +9,6 @@
       <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
         {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-500"> {{ iacobData.personal.name.split(' ')[1] }}</span>
       </h1>
-      
-      <!-- Title -->
-      <h2 class="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-6">{{ iacobData.personal.title }}</h2>
-      
-      <!-- Subtitle Quote -->
-      <blockquote class="text-xl md:text-2xl lg:text-3xl text-gray-300 italic mb-8 max-w-4xl mx-auto leading-relaxed">
-        "{{ iacobData.personal.subtitle }}"
-      </blockquote>
-      
-      <!-- Experience Badge -->
-      <div class="inline-block bg-red-500 text-white px-6 py-3 rounded-xl mb-8">
-        <div class="text-center">
-          <div class="text-2xl md:text-3xl font-bold">{{ iacobData.personal.yearsExperience }}+</div>
-          <div class="text-sm uppercase tracking-wide">{{ iacobData.ui.sections.header.yearsLabel }} Experience</div>
-        </div>
-      </div>
       
       <!-- Call to Action Button -->
       <div class="mt-8">
@@ -82,7 +66,7 @@ section {
 
 .hero-background {
   background-image: url('../assets/images/image00064.jpeg');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

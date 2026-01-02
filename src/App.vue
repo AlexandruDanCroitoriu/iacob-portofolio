@@ -1,13 +1,12 @@
 <script setup>
 import { onMounted, ref } from 'vue'
-import HeaderSection from './components/HeaderSection.vue'
-import ImageGallery from './components/ImageGallery.vue'
-import CardsSection from './components/CardsSection.vue'
-import ServicesSection from './components/ServicesSection.vue'
-import WhyMeSection from './components/WhyMeSection.vue'
-import WhoIAmSection from './components/WhoIAmSection.vue'
-import ContactSection from './components/ContactSection.vue'
-import FooterSection from './components/FooterSection.vue'
+import HeaderSection from './components/Header.vue'
+import ImageGallery from './components/Galery.vue'
+import ServicesSection from './components/Services.vue'
+import WhyMeSection from './components/WhyMe.vue'
+import WhoIAmSection from './components/WhoIAm.vue'
+import ContactSection from './components/Contact.vue'
+import FooterSection from './components/Footer.vue'
 
 // Single Page Application - All UI components are contained within this file
 // App logic will be added here as needed
@@ -18,14 +17,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="">
     <!-- Fitness Coach Portfolio Website -->
-    <HeaderSection class="relative pb-42"/>
+    <!-- <HeaderSection class="relative pb-42"/> -->
+    <ServicesSection class=""/>
     <ImageGallery />
-    <div class="relative">
-      <CardsSection class="absolute -top-22 left-1/2 -translate-x-1/2 container flex items-center justify-center"/>
-    </div>
-    <ServicesSection class="pt-62"/>
     <WhyMeSection />
     <WhoIAmSection />
     <ContactSection />

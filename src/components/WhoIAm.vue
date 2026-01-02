@@ -61,15 +61,9 @@
                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div class="absolute bottom-6 left-6 right-6">
                   <div class="bg-zinc-800/90 backdrop-blur-sm rounded-lg p-4 border border-zinc-700">
-                    <div class="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div class="text-2xl font-bold text-white">{{ iacobData.personal.yearsExperience }}+</div>
-                        <div class="text-sm text-gray-300">{{ iacobData.ui.sections.whoIAm.yearsExperienceLabel }}</div>
-                      </div>
-                      <div>
-                        <div class="text-2xl font-bold text-white">500+</div>
-                        <div class="text-sm text-gray-300">{{ iacobData.ui.sections.whoIAm.clientsHelped }}</div>
-                      </div>
+                    <div class="text-center">
+                      <div class="text-2xl font-bold text-white">500+</div>
+                      <div class="text-sm text-gray-300">{{ iacobData.ui.sections.whoIAm.clientsHelped }}</div>
                     </div>
                   </div>
                 </div>
@@ -83,7 +77,7 @@
           <p class="text-lg text-gray-300 mb-6">
             {{ iacobData.ui.sections.whoIAm.callToActionText }}
           </p>
-          <ScheduleButton :text="iacobData.ui.buttons.scheduleConsultation" />
+          <ScheduleButton :text="iacobData.ui.buttons.bookNow" />
         </div>
       </div>
     </div>

@@ -2,53 +2,194 @@ export const iacobData = {
   // Personal Information
   personal: {
     name: "Alexandru Iacob",
-    title: "Certified Personal Trainer",
-    subtitle: "Transform Your Body, Transform Your Life",
-    bio: "I'm Alexandru Iacob, a certified personal trainer with over 8 years of experience transforming lives through fitness. My mission is to help you unlock your potential and achieve lasting results through personalized training and unwavering support.",
-    yearsExperience: 8,
-    location: "New York, NY",
     email: "alex@fitnesscoach.com",
     phone: "+1 (555) 123-4567",
-    profileImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    heroImage: "https://images.unsplash.com/photo-1549476464-37392f717541?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    scheduleUrl: "https://alexsakii.dayschedule.com/",
+    socialMedia: {
+      instagram: "#",
+      youtube: "#",
+      facebook: "#",
+      linkedin: "#"
+    },
+    certifications: [
+      "NASM Certified Personal Trainer",
+      "Nutrition Specialist",
+      "Former Competitive Athlete",
+      "8+ Years Experience"
+    ]
   },
-
-  // Professional Credentials
-  credentials: [
-    "NASM Certified Personal Trainer",
-    "Nutrition Specialist",
-    "Former Competitive Athlete",
-    "8+ Years Experience"
-  ],
 
   // Core Services
   services: [
     {
-      id: "personal-training",
-      title: "Personal Training",
-      description: "One-on-one sessions tailored to your goals, fitness level, and lifestyle. Receive personalized workout plans, ongoing progress tracking, and expert guidance every step of the way. Each session is designed to challenge you, motivate you, and help you break through plateaus. Whether you're a beginner or an experienced athlete, I will adapt the training to your unique needs and abilities. Together, we'll build strength, improve endurance, and boost your confidence both inside and outside the gym.",
-      scheduleUrl: "https://alexsakii.dayschedule.com/group-session"
-    },
-    {
-      id: "nutrition-coaching",
-      title: "Nutrition Coaching",
-      description: "Custom meal plans and nutritional guidance to fuel your transformation. I provide detailed nutrition assessments, help you set realistic dietary goals, and teach you how to make healthy choices that fit your lifestyle. You'll learn about macronutrients, portion control, and how to optimize your meals for energy and recovery. My coaching includes ongoing support, recipe ideas, and strategies to overcome common obstacles. With my guidance, you'll develop sustainable habits that support your fitness journey and overall well-being.",
-      scheduleUrl: "https://alexsakii.dayschedule.com/"
-    },
-    {
       id: "online-coaching",
-      title: "Online Coaching",
-      description: "Virtual training sessions and guidance from anywhere in the world. Benefit from flexible scheduling, personalized workout programs, and regular check-ins to keep you accountable. I use video calls, messaging, and progress tracking tools to ensure you stay motivated and on track. You'll receive expert feedback on your form, technique, and performance, just like in-person clients. Online coaching is perfect for busy professionals, frequent travelers, or anyone who prefers to train at home. Experience the same level of support and results, no matter where you are.",
-      scheduleUrl: "https://alexsakii.dayschedule.com/"
+      title: "Online coaching",
+      subtitle: "Obiectivele setate greșit duc la rezultate slabe indiferent de cat de mult muncești",
+      shortDescription: "Antrenamentele incep cu un set de obiective clare, masurabile, realizabile si sustenabile, potrivite stilului tau de viata",
+      scheduleUrl: "https://alexsakii.dayschedule.com/online-coaching",
+      details: {
+        title: "Ce include Online Coaching-ul?",
+        sections: [
+          {
+            title: "Setarea obiectivelor clare și realizabile",
+            description: "Analizăm obiectivul tău inițial și îl transformăm într-un obiectiv concret, măsurabil și realist, adaptat:",
+            highlights: [
+              "stilului tău de viață",
+              "programului zilnic",
+              "nivelului tău actual",
+              "istoricului tău (antrenamente, accidentări, diete)"
+            ],
+            note: "Fără obiective generale. Fără „vreau să slăbesc puțin.”"
+          },
+          {
+            title: "Evaluare inițială completă",
+            description: "Pentru a construi un plan care chiar funcționează:",
+            highlights: [
+              "evaluare fizică și posturală (pe baza pozelor/video)",
+              "nivel de forță și experiență",
+              "obiceiuri zilnice, somn, stres",
+              "relația cu mâncarea și antrenamentul"
+            ],
+            note: "Planul pornește din realitate, nu din teorie."
+          },
+          {
+            title: "Plan de antrenament personalizat",
+            description: "Un program adaptat exclusiv pentru tine:",
+            highlights: [
+              "structurat pe obiectivul tău",
+              "adaptat timpului disponibil și accesului la sală/echipamente",
+              "progresiv, clar și ușor de urmărit",
+              "focus pe execuție corectă, forță și rezultate sustenabile"
+            ],
+            note: "Primești explicații clare, nu doar exerciții aruncate într-un tabel."
+          },
+          {
+            title: "Plan nutrițional adaptat stilului tău de viață",
+            description: "Fără diete extreme sau restricții inutile:",
+            highlights: [
+              "structură nutrițională adaptată obiectivului",
+              "recomandări clare, ușor de aplicat",
+              "flexibilitate (mese, preferințe, ieșiri sociale)",
+              "focus pe obiceiuri, nu pe perfecțiune"
+            ],
+            note: "Scopul este să poți menține planul, nu doar să-l urmezi „o lună\"."
+          },
+          {
+            title: "Check-in săptămânal (standard)",
+            description: "Recomandare: check-in săptămânal este ideal pentru majoritatea oamenilor.",
+            highlights: [
+              "analizăm progresul (greutate, poze, feedback)",
+              "ajustăm antrenamentele și nutriția",
+              "discutăm ce a funcționat și ce nu",
+              "corectăm din mers, fără a aștepta „să treacă luna"
+            ],
+            note: "Opțional, pentru clienți avansați sau foarte implicați: check-in-uri mai dese."
+          },
+          {
+            title: "Suport constant pe WhatsApp",
+            description: "Nu ești singur între check-in-uri.",
+            highlights: [
+              "întrebări legate de antrenamente",
+              "ajustări rapide",
+              "feedback pe execuție (video)",
+              "suport motivațional când lucrurile nu merg perfect"
+            ],
+            note: "Coaching real, nu doar „trimis program\"."
+          },
+          {
+            title: "Educație, mindset și obiceiuri pe termen lung",
+            description: "Online coaching-ul nu înseamnă doar fizic. Lucrăm și la:",
+            highlights: [
+              "disciplină și consistență",
+              "mindset sănătos față de mâncare și sport",
+              "construirea unor obiceiuri care rămân și după colaborare"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      id: "servidiul 2",
+      title: "titlu serviciu 2",
+      subtitle: "subtitlu serviciu 2",
+      shortDescription: "Descriere scurtă serviciu 2",
+      scheduleUrl: "https://alexsakii.dayschedule.com/serviciu-2",
+      details: {
+        title: "Detalii serviciu 2",
+        sections: [
+          {
+            title: "Subsecțiune 1",
+            description: "Descriere subsecțiune 1",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          },
+          {
+            title: "Subsecțiune 2",
+            description: "Descriere subsecțiune 2",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          },
+          {
+            title: "Subsecțiune 3",
+            description: "Descriere subsecțiune 3",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      id: "servidiul 3",
+      title: "titlu serviciu 3",
+      subtitle: "subtitlu serviciu 3",
+      shortDescription: "Descriere scurtă serviciu 3",
+      scheduleUrl: "https://alexsakii.dayschedule.com/serviciu-3",
+      details: {
+        title: "Detalii serviciu 3",
+        sections: [
+          {
+            title: "Subsecțiune 1",
+            description: "Descriere subsecțiune 1",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          },
+          {
+            title: "Subsecțiune 2",
+            description: "Descriere subsecțiune 2",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          },
+          {
+            title: "Subsecțiune 3",
+            description: "Descriere subsecțiune 3",
+            highlights: [
+              "Punct important 1",
+              "Punct important 2",
+              "Punct important 3"
+            ]
+          }
+        ]
+      }
     }
   ],
 
-  // Social Media Links
-  socialMedia: {
-    instagram: "#",
-    youtube: "#",
-    facebook: "#",
-    linkedin: "#"
+  generalTranscriptions: {
+
   },
 
   // Why Me Section
@@ -133,15 +274,12 @@ export const iacobData = {
   // UI Text and Labels
   ui: {
     buttons: {
-      bookNow: "BOOK NOW",
-      getStarted: "GET STARTED TODAY",
-      scheduleConsultation: "SCHEDULE A CONSULTATION",
-      bookSession: "BOOK YOUR SESSION",
-      seeDetails: "Vezi detalii" // Romanian for "See details"
+      bookNow: "Programeazăte",
+      seeDetails: "Vezi detalii",
     },
     sections: {
       services: {
-        title: "My Services",
+        title: "Serviciile Mele",
         subtitle: "Transform your fitness journey with personalized training, nutrition guidance, and expert coaching tailored to your unique goals.",
         bookPrefix: "Book" // For "Book Personal Training" etc.
       },
