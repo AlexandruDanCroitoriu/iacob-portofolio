@@ -144,9 +144,10 @@
                 Close
               </button>
               <ScheduleButton
+                class="w-full"
                 :text="`${iacobData.ui.buttons.bookNow} ${selectedService.title}`"
                 :service-url="selectedService.scheduleUrl"
-              />
+                />
             </div>
           </div>
         </div>
