@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Who <span class="text-red-500">I Am</span>
+          Who <span class="text-red-700">I Am</span>
         </h2>
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.whoIAm.subtitle }}
@@ -33,7 +33,7 @@
                   :key="achievement"
                   class="flex items-start"
                 >
-                  <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <div class="w-2 h-2 bg-red-700 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                   <span class="text-gray-300">{{ achievement }}</span>
                 </li>
               </ul>

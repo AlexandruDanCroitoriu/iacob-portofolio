@@ -8,7 +8,7 @@
           <div class="md:col-span-2">
             <div class="mb-6">
               <h3 class="text-2xl font-bold mb-2">
-                {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-500"> {{ iacobData.personal.name.split(' ')[1] }}</span>
+                {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-700"> {{ iacobData.personal.name.split(' ')[1] }}</span>
               </h3>
               <p class="text-gray-300 italic">"{{ iacobData.footer.tagline }}"</p>
             </div>
@@ -17,7 +17,7 @@
             <div class="flex space-x-4">
               <a 
                 :href="iacobData.personal.socialMedia.instagram" 
-                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -26,7 +26,7 @@
               </a>
               <a 
                 :href="iacobData.personal.socialMedia.youtube" 
-                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
                 aria-label="YouTube"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -35,7 +35,7 @@
               </a>
               <a 
                 :href="iacobData.personal.socialMedia.facebook" 
-                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
                 aria-label="Facebook"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@
               </a>
               <a 
                 :href="iacobData.personal.socialMedia.linkedin" 
-                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-500 transition-colors duration-300"
+                class="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

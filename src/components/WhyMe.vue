@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          Why <span class="text-red-500">Me</span>
+          Why <span class="text-red-700">Me</span>
         </h2>
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.whyMe.subtitle }}
@@ -39,7 +39,7 @@
               >
                 <div class="flex items-start space-x-4">
                   <!-- Number Badge -->
-                  <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div class="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <span class="text-white text-lg font-bold">{{ index + 1 }}</span>
                   </div>
 

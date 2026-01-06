@@ -4,7 +4,7 @@
       <!-- Section Header -->
       <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          <span class="text-red-500">Gallery</span>
+          <span class="text-red-700">Gallery</span>
         </h2>
         <p class="text-lg text-gray-300 max-w-2xl mx-auto">
           Witness the transformation journey and dedication in every workout
@@ -41,7 +41,7 @@
             <!-- Overlay -->
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300">
               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                <div class="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center">
                   <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
                   </svg>
@@ -55,7 +55,7 @@
         <div v-if="galleryImages.length > 8" class="text-center mt-12">
           <button 
             @click="openGalleryDialog"
-            class="bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center mx-auto gap-2"
+            class="bg-red-700 hover:bg-red-800 text-white font-semibold px-8 py-3 rounded-lg transition-colors duration-300 flex items-center justify-center mx-auto gap-2"
           >
             <span>See More Photos ({{ galleryImages.length - 8 }} more)</span>
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@
           <!-- Close Button -->
           <button 
             @click="closeModal"
-            class="absolute top-4 right-4 text-white hover:text-red-500 transition-colors duration-200 z-10"
+            class="absolute top-4 right-4 text-white hover:text-red-700 transition-colors duration-200 z-10"
           >
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -88,7 +88,7 @@
           <!-- Navigation Buttons -->
           <button 
             @click.stop="previousImage"
-            class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-red-700 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -97,7 +97,7 @@
 
           <button 
             @click.stop="nextImage"
-            class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-red-700 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -133,13 +133,13 @@
             <div class="flex justify-between items-center max-w-7xl mx-auto">
               <div>
                 <h3 class="text-2xl md:text-3xl font-bold text-white">
-                  Complete <span class="text-red-500">Gallery</span>
+                  Complete <span class="text-red-700">Gallery</span>
                 </h3>
                 <p class="text-gray-300 text-sm">{{ galleryImages.length }} photos</p>
               </div>
               <button 
                 @click="closeGalleryDialog"
-                class="text-white hover:text-red-500 transition-colors duration-200 p-2 rounded-full bg-black/50"
+                class="text-white hover:text-red-700 transition-colors duration-200 p-2 rounded-full bg-black/50"
               >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -166,7 +166,7 @@
                 <!-- Overlay -->
                 <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300">
                   <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center">
+                    <div class="w-10 h-10 bg-red-700 rounded-full flex items-center justify-center">
                       <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
                       </svg>

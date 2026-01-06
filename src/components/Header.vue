@@ -7,7 +7,7 @@
     <div class="relative z-10 container mx-auto px-4 text-center">
       <!-- Main Heading -->
       <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-        {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-500"> {{ iacobData.personal.name.split(' ')[1] }}</span>
+        {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-700"> {{ iacobData.personal.name.split(' ')[1] }}</span>
       </h1>
       
       <!-- Call to Action Button -->
@@ -28,20 +28,8 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
 import ScheduleButton from './ScheduleButton.vue'
 import iacobData from '../data/iacobData.js'
-
-const isLoaded = ref(false)
-
-onMounted(() => {
-  // Trigger animations after component is mounted
-  setTimeout(() => {
-    isLoaded.value = true
-  }, 100)
-  
-  console.log('HeaderSection mounted with background image')
-})
 </script>
 
 <style scoped>
@@ -72,47 +60,4 @@ section {
   background-attachment: fixed;
 }
 
-/* Entrance animations */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animations to content elements */
-h1, h2, blockquote, .inline-block {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-h2 {
-  animation-delay: 0.2s;
-}
-
-blockquote {
-  animation-delay: 0.4s;
-}
-
-.inline-block {
-  animation-delay: 0.6s;
-}
-
-/* Ensure text is readable on all screen sizes */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 3rem;
-  }
-  
-  h2 {
-    font-size: 1.5rem;
-  }
-  
-  blockquote {
-    font-size: 1.125rem;
-  }
-}
 </style>

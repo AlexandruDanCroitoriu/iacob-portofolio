@@ -19,7 +19,7 @@ onMounted(() => {
 <template>
   <div class="">
     <!-- Fitness Coach Portfolio Website -->
-    <!-- <HeaderSection class="relative pb-42"/> -->
+    <HeaderSection class="relative pb-42"/>
     <ServicesSection class=""/>
     <ImageGallery />
     <WhyMeSection />

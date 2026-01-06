@@ -2,10 +2,10 @@
   <section id="services" class="pt-20 pb-16 bg-black">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+      <div class="text-center mb-12 ">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 ">
           {{ iacobData.ui.sections.services.title.split(" ")[0] }}
-          <span class="text-red-500">{{
+          <span class="text-red-700">{{
             iacobData.ui.sections.services.title.split(" ")[1]
           }}</span>
         </h2>
@@ -25,7 +25,7 @@
           <!-- Header Section -->
           <div class="px-4 py-5 sm:px-6">
             <!-- Service Title -->
-            <h3 class="text-2xl font-bold text-white text-center">
+            <h3 class="text-2xl font-bold text-white text-center underline decoration-wavy decoration-red-800">
               {{ service.title }}
             </h3>
 
@@ -73,25 +73,28 @@
         >
           <div class="bg-gray-900 w-full h-full overflow-hidden flex flex-col">
             <!-- Modal Header -->
-            <div class="bg-gray-800 px-6 py-2 border-b border-gray-700 flex justify-between items-center flex-shrink-0">
-              <h2 class="text-2xl md:text-3xl font-bold text-white">
-                {{ selectedService.title }}
-              </h2>
-              <button
+            <div class="bg-gray-800 px-6 py-2 border-b border-gray-700 flex-shrink-0">
+              <div class="flex items-center justify-between max-w-5xl mx-auto">
+                <div></div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white">
+                  {{ selectedService.title }}
+                </h2>
+                <button
                 @click="closeModal"
                 class="text-gray-400 hover:text-white transition-colors p-2"
-              >
+                >
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
+            </div>
             </div>
 
             <!-- Modal Body -->
             <div class="overflow-y-auto flex-1 px-6 md:px-12 lg:px-24 py-8">
               <div v-if="selectedService.details" class="max-w-5xl mx-auto">
                 <!-- Service Details Title -->
-                <h3 class="text-xl md:text-2xl font-bold text-red-500 mb-6">
+                <h3 class="text-xl md:text-2xl font-bold text-red-700 mb-6">
                   {{ selectedService.details.title }}
                 </h3>
 
@@ -119,7 +122,7 @@
                         :key="hIndex"
                         class="flex items-start text-gray-200"
                       >
-                        <svg class="w-5 h-5 text-red-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg class="w-5 h-5 text-red-700 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                         </svg>
                         <span>{{ highlight }}</span>
@@ -127,7 +130,7 @@
                     </ul>
 
                     <!-- Note -->
-                    <p v-if="section.note" class="text-sm text-gray-400 italic border-l-4 border-red-500 pl-4">
+                    <p v-if="section.note" class="text-sm text-gray-400 italic border-l-4 border-red-700 pl-4">
                       {{ section.note }}
                     </p>
                   </div>
