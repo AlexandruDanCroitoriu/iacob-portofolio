@@ -2,7 +2,7 @@
   <section id="gallery" class="py-20 bg-black">
     <div class="container mx-auto px-4">
       <!-- Section Header -->
-      <div class="text-center mb-16">
+      <div ref="galleryTitleRef" class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           <span class="text-red-700">Gallery</span>
         </h2>
@@ -17,6 +17,7 @@
           <div 
             v-for="(image, index) in displayedImages" 
             :key="index"
+            data-gallery-item
             class="group relative overflow-hidden rounded-lg aspect-square cursor-pointer"
             @click="openModal(index)"
           >
@@ -205,6 +206,7 @@ const isModalOpen = ref(false)
 const isGalleryDialogOpen = ref(false)
 const currentImageIndex = ref(0)
 const showFullGallery = ref(false)
+const galleryTitleRef = ref(null)
 
 // Generate gallery images array
 const galleryImages = ref([])
@@ -216,6 +218,31 @@ const displayedImages = computed(() => {
 
 // Import all images using Vite's glob import
 const imageModules = import.meta.glob('../assets/images/*.jpeg', { eager: true })
+
+// Initialize observer
+let observer = null
+
+const initObserver = () => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target
+          // Add delay before showing
+          setTimeout(() => {
+            element.classList.add('is-visible')
+          }, 500)
+          // Unobserve after animation
+          observer.unobserve(element)
+        }
+      })
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px'
+    }
+  )
+}
 
 // Generate images array on component mount
 onMounted(() => {
@@ -241,6 +268,23 @@ onMounted(() => {
       error: false
     })
   })
+
+  // Initialize observer
+  initObserver()
+  
+  // Observe title
+  if (galleryTitleRef.value) {
+    galleryTitleRef.value.classList.add('fade-in-element')
+    observer.observe(galleryTitleRef.value)
+  }
+  
+  // Observe all gallery items
+  setTimeout(() => {
+    document.querySelectorAll('[data-gallery-item]').forEach((el) => {
+      el.classList.add('fade-in-element')
+      observer.observe(el)
+    })
+  }, 100)
 })
 
 // Gallery toggle function
@@ -345,6 +389,9 @@ onMounted(() => {
 
 onUnmounted(() => {
   document.removeEventListener('keydown', handleKeyPress)
+  if (observer) {
+    observer.disconnect()
+  }
   document.body.style.overflow = 'auto'
   isModalOpen.value = false
   isGalleryDialogOpen.value = false

@@ -6,12 +6,12 @@
     <!-- Centered Content -->
     <div class="relative z-10 container mx-auto px-4 text-center">
       <!-- Main Heading -->
-      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+      <h1 ref="headingRef" class="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
         {{ iacobData.personal.name.split(' ')[0] }}<span class="text-red-700"> {{ iacobData.personal.name.split(' ')[1] }}</span>
       </h1>
       
       <!-- Call to Action Button -->
-      <div class="mt-8">
+      <div ref="buttonRef" class="mt-8">
         <ScheduleButton :text="iacobData.ui.buttons.bookNow" />
       </div>
     </div>
@@ -28,8 +28,58 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
 import ScheduleButton from './ScheduleButton.vue'
 import iacobData from '../data/iacobData.js'
+
+// Refs for elements to observe
+const headingRef = ref(null)
+const buttonRef = ref(null)
+
+let observer = null
+
+// Initialize observer
+const initObserver = () => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target
+          // Add delay before showing
+          setTimeout(() => {
+            element.classList.add('is-visible')
+          }, 500)
+          // Unobserve after animation
+          observer.unobserve(element)
+        }
+      })
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px'
+    }
+  )
+}
+
+onMounted(() => {
+  initObserver()
+  
+  // Observe heading and button
+  if (headingRef.value) {
+    headingRef.value.classList.add('fade-in-element')
+    observer.observe(headingRef.value)
+  }
+  if (buttonRef.value) {
+    buttonRef.value.classList.add('fade-in-element')
+    observer.observe(buttonRef.value)
+  }
+})
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect()
+  }
+})
 </script>
 
 <style scoped>

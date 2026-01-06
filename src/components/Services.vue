@@ -3,13 +3,13 @@
     <div class="container mx-auto px-4">
       <!-- Section Header -->
       <div class="text-center mb-12 ">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 ">
+        <h2 ref="titleRef" class="text-4xl md:text-5xl font-bold text-white mb-4 ">
           {{ iacobData.ui.sections.services.title.split(" ")[0] }}
           <span class="text-red-700">{{
             iacobData.ui.sections.services.title.split(" ")[1]
           }}</span>
         </h2>
-        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+        <p ref="subtitleRef" class="text-lg text-gray-300 max-w-2xl mx-auto">
           {{ iacobData.ui.sections.services.subtitle }}
         </p>
       </div>
@@ -20,6 +20,7 @@
           v-for="service in iacobData.services"
           :key="service.id"
           :id="`service-${service.id}`"
+          data-service-item
           class="divide-y divide-white/10 overflow-hidden rounded-lg bg-gray-800/50 outline-1 -outline-offset-1 outline-white/10 w-full flex flex-col"
         >
           <!-- Header Section -->
@@ -160,11 +161,71 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import iacobData from "../data/iacobData.js";
 import ScheduleButton from "./ScheduleButton.vue";
 
 const selectedService = ref(null);
+const titleRef = ref(null);
+const subtitleRef = ref(null);
+let observer = null;
+
+// Initialize the observer
+const initObserver = () => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const element = entry.target;
+          // Add delay before showing
+          setTimeout(() => {
+            element.classList.add('is-visible');
+          }, 200);
+          // Unobserve after animation
+          observer.unobserve(element);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px'
+    }
+  );
+};
+
+// Setup observer for elements
+const setServiceRef = (el) => {
+  if (el && observer) {
+    el.classList.add('fade-in-element');
+    observer.observe(el);
+  }
+};
+
+onMounted(() => {
+  initObserver();
+  
+  // Observe title and subtitle
+  if (titleRef.value) {
+    titleRef.value.classList.add('fade-in-element');
+    observer.observe(titleRef.value);
+  }
+  if (subtitleRef.value) {
+    subtitleRef.value.classList.add('fade-in-element');
+    observer.observe(subtitleRef.value);
+  }
+  
+  // Observe all service items
+  document.querySelectorAll('[data-service-item]').forEach((el) => {
+    el.classList.add('fade-in-element');
+    observer.observe(el);
+  });
+});
+
+onUnmounted(() => {
+  if (observer) {
+    observer.disconnect();
+  }
+});
 
 const openModal = (service) => {
   selectedService.value = service;
