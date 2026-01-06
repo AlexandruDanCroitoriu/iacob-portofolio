@@ -65,17 +65,20 @@
         </div>
       </div>
 
-      <!-- Modal -->
+    </div>
+
+    <!-- Modal -->
+    <Teleport to="body">
       <div 
         v-if="isModalOpen" 
-        class="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+        class="fixed inset-0 bg-black/90 z-[9999] flex items-center justify-center p-4"
         @click="closeModal"
       >
-        <div class="relative max-w-4xl max-h-full">
+        <div class="relative w-full h-full flex items-center justify-center">
           <!-- Close Button -->
           <button 
             @click="closeModal"
-            class="absolute -top-12 right-0 text-white hover:text-red-500 transition-colors duration-200"
+            class="absolute top-4 right-4 text-white hover:text-red-500 transition-colors duration-200 z-10"
           >
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
@@ -85,7 +88,7 @@
           <!-- Navigation Buttons -->
           <button 
             @click.stop="previousImage"
-            class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2"
+            class="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
@@ -94,7 +97,7 @@
 
           <button 
             @click.stop="nextImage"
-            class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-red-500 transition-colors duration-200 bg-black/50 rounded-full p-2 z-10"
           >
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
@@ -105,21 +108,23 @@
           <img 
             :src="getCurrentModalImage()?.src" 
             :alt="getCurrentModalImage()?.alt"
-            class="max-w-full max-h-full object-contain rounded-lg"
+            class="max-w-[calc(100vw-2rem)] max-h-[calc(100vh-2rem)] w-auto h-auto object-contain rounded-lg"
             @click.stop
           />
 
           <!-- Image Counter -->
-          <div class="absolute -bottom-12 left-1/2 -translate-x-1/2 text-white text-center">
-            <span class="text-sm">{{ getModalImageIndex() }} / {{ getModalTotalImages() }}</span>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-center z-10">
+            <span class="text-sm bg-black/50 px-3 py-1 rounded">{{ getModalImageIndex() }} / {{ getModalTotalImages() }}</span>
           </div>
         </div>
       </div>
+    </Teleport>
 
-      <!-- Gallery Dialog Modal -->
+    <!-- Gallery Dialog Modal -->
+    <Teleport to="body">
       <div 
         v-if="isGalleryDialogOpen" 
-        class="fixed inset-0 bg-black/95 z-50 overflow-y-auto"
+        class="fixed inset-0 bg-black/95 z-[9998] overflow-y-auto"
         @click="closeGalleryDialog"
       >
         <div class="min-h-screen p-4">
@@ -188,7 +193,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </Teleport>
   </section>
 </template>
 

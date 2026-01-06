@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-screen flex items-center justify-center bg-black overflow-hidden hero-background">
+  <section class="relative min-h-[100svh] flex items-center justify-center bg-black overflow-hidden hero-background">
     <!-- Gradient overlay for text readability -->
     <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/10 via-black/20 to-black/30"></div>
 
