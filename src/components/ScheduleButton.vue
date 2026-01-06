@@ -2,7 +2,7 @@
   <div>
     <button
       @click="openSchedulePopup" 
-      class="w-full bg-red-600 rounded-md inline-block text-white px-8 py-3 font-semibold hover:bg-red-700 transition-colors">
+      class="max-w-sm bg-red-600 rounded-md inline-block text-white px-8 py-3 font-semibold hover:bg-red-700 transition-colors">
       {{ text }}
     </button>
   </div>

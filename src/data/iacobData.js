@@ -109,10 +109,10 @@ export const iacobData = {
       }
     },
     {
-      id: "servidiul 2",
-      title: "titlu serviciu 2",
-      subtitle: "subtitlu serviciu 2",
-      shortDescription: "Descriere scurtă serviciu 2",
+      id: "one-on-one-training",
+      title: "1 on 1 Training",
+      subtitle: "Antrenamentul 1 la 1 inseamna atentie totala asupra ta. Fiecare exercitiu este supravegheat, fiecare miscare este corectate, iar fiecare antrenament este ghidat pas cu pas",
+      shortDescription: "Lucrezi sub indrumare constanta, astfel incat:\n - sa executi exercitiile corect si in siguranta\n - sa eviti accidentarile si greselile frecvente\n - sa progresezi eficient, fara timp pierdut\n - sa intelegi ce faci, de ce faci si cu evoluezi",
       scheduleUrl: "https://alexsakii.dayschedule.com/serviciu-2",
       details: {
         title: "Detalii serviciu 2",
